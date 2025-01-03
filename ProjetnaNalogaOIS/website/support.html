@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="support.css">
+  <title>SeamlesSync</title>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="installation.html">Installation</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="forum.html">Forum</a>
+    <a href="team.html">The Team</a>
+    <a href="support.html">Support</a>
+    <a href="employment.html">Employment</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+  <main>
+    <div>
+      <h3>Attention</h3>
+      <p>Before submitting your issues, please consult the <a href="documentation.html">documentation</a> and <a
+          href="forum.html">forums</a> there is a big chance, that someone before
+        had encountered the same problems you have. You can use our fuzzy logic search to easely through both our
+        documentation and our forums, find the issue you are encountering. Once you make sure that you cannot find a
+        similar issue to yours or, sometimes: even the exact same one, in the documentation or forums you can freely
+        submit the
+        ticket. Our team is small and people that freely contribute and
+        help are not paid, so you submitting an issue is very resourceful for us.</p>
+      <p style="color:#ff9900">Thank you for understanding.</p>
+    </div>
+    <div id="maindiv2">
+      <form>
+        <div class="formdiv" id="formdiv1">
+          <input type="text" name="title" placeholder="Title" />
+          <i id="clip" class="fa-solid fa-paperclip"></i>
+        </div>
+        <div class="formdiv" id="formdiv2">
+          <input id="desc" type="textarea" name="description" />
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <h5>About us</h5>
+      <p>oogabooga@kmetgmail.com</p>
+      <p>silicon valley mountain view 74</p>
+    </div>
+    <div>
+
+    </div>
+    <!-- map embed-->
+    <div style="overflow:hidden;max-width:100%;width:250px;height:250px;">
+      <div id="g-mapdisplay" style="padding: 0px;height:100%; width:100%;max-width:100%;"><iframe
+          style="height:100%;width:100%;border:0;" frameborder="0"
+          src="https://www.google.com/maps/embed/v1/place?q=silicon+valley&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+      </div>
+      <style>
+        #g-mapdisplay img.text-marker {
+          max-width: none !important;
+          background: none !important;
+        }
+
+        img {
+          max-width: none
+        }
+      </style>
+    </div>
+  </footer>
+
+  <script>
+    const input = document.getElementById('desc');
+    const label = document.createElement('label');
+    label.innerText = 'Description of your problem';
+    label.style.position = 'absolute';
+    label.style.top = '6%';
+    label.style.left = '4px';
+    label.style.transform = 'translateY(-50%)';
+    label.style.color = 'gray';
+    label.style.pointerEvents = 'none';
+    label.style.fontSize = '43%';
+
+
+    input.parentElement.style.position = 'relative';
+    input.parentElement.appendChild(label);
+
+    input.addEventListener('focus', () => {
+      label.style.display = 'none';
+    });
+
+    input.addEventListener('blur', () => {
+      if (!input.value) label.style.display = 'block';
+    });
+  </script>
+</body>
+
+</html>

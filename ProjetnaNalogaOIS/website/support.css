@@ -1,0 +1,74 @@
+main {
+  display: flex;
+  margin-top: 10rem;
+}
+
+main div {
+  display: inline;
+  flex: 1;
+}
+
+form {
+  display: flex;
+  padding: 15px;
+  background-color: #1A1A1A;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.formdiv {
+  margin-left: 0px;
+  display: block;
+  flex: 1;
+  flex-basis: 100%;
+}
+
+#clip {
+  font-size: 60%;
+  display: inline;
+  flex: 0;
+  border: none;
+}
+
+#formdiv1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+#maindiv2 {
+  display: flex;
+}
+
+input:focus {
+  outline: none;
+}
+
+#desc {
+  text-align: left;
+  height: 180px;
+  width: 100%;
+  padding: 0px;
+}
+
+form div input,
+i {
+  display: inline;
+  border: 1px solid #ff9800;
+  width: fit-content;
+}
+
+i {
+  font-size: 100%;
+  width: fit-content;
+  display: inline;
+}
+
+main a {
+  color: #ff9800;
+  text-decoration: none;
+}
+
+main a:hover {
+  color: #ffa726;
+}
